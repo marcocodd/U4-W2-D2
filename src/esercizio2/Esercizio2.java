@@ -18,14 +18,20 @@ public class Esercizio2 {
     }
 
     public static List<Integer> generaListaRandomInversa(List<Integer> listaNumeri) {
+        List<Integer> listaConcatenata = new ArrayList<>(listaNumeri);
         Collections.reverse(listaNumeri);
-        return listaNumeri;
+        listaConcatenata.addAll(listaNumeri);
+
+        return listaConcatenata;
     }
 
     public static void main(String[] args) {
 
-        List<Integer> numeriCasuali = generaNumeriRandomOrdinata(30);
+        List<Integer> numeriCasuali = generaNumeriRandomOrdinata(5);
         System.out.println(numeriCasuali);
+
+        List<Integer> listaNumeriOrdinataEInversa = generaListaRandomInversa(numeriCasuali);
+        System.out.println(listaNumeriOrdinataEInversa);
 
     }
 }
