@@ -30,7 +30,7 @@ public class Esercizio2 {
         for (int numero : listaNumeri) {
             if (numero % 2 == 0 && pari) {
                 pariOdispari.add(numero);
-            } else if (numero % 2 != 0) {
+            } else if (!pari && numero % 2 != 0) {
                 pariOdispari.add(numero);
             }
         }
