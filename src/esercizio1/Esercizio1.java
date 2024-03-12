@@ -18,17 +18,15 @@ public class Esercizio1 {
 
         Set<String> paroleInserite = new HashSet<>();
         Set<String> paroleDuplicate = new HashSet<>();
+
         for (int i = 0; i < nParole; i++) {
             System.out.println("Scrivi la parola da inserire n:" + (i + 1));
             String inputParola = input.nextLine();
 
-            if (paroleInserite.contains(inputParola)) {
+            if (!paroleInserite.add(inputParola)) {
                 paroleDuplicate.add(inputParola);
 
-            } else {
-                paroleInserite.add(inputParola);
             }
-
 
         }
 
