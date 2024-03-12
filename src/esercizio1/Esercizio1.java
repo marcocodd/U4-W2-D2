@@ -20,13 +20,13 @@ public class Esercizio1 {
         Set<String> paroleDuplicate = new HashSet<>();
         for (int i = 0; i < nParole; i++) {
             System.out.println("Scrivi la parola da inserire n:" + (i + 1));
-            String parola = input.nextLine();
+            String inputParola = input.nextLine();
 
-            if (paroleInserite.contains(parola)) {
-                paroleDuplicate.add(parola);
+            if (paroleInserite.contains(inputParola)) {
+                paroleDuplicate.add(inputParola);
 
             } else {
-                paroleInserite.add(parola);
+                paroleInserite.add(inputParola);
             }
 
 

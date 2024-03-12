@@ -25,6 +25,18 @@ public class Esercizio2 {
         return listaConcatenata;
     }
 
+    public static List<Integer> generaListaParoOdispari(List<Integer> listaNumeri, boolean pari) {
+        List<Integer> pariOdispari = new ArrayList<>();
+        for (int numero : listaNumeri) {
+            if (numero % 2 == 0 && pari) {
+                pariOdispari.add(numero);
+            } else if (numero % 2 != 0) {
+                pariOdispari.add(numero);
+            }
+        }
+        return pariOdispari;
+    }
+
     public static void main(String[] args) {
 
         List<Integer> numeriCasuali = generaNumeriRandomOrdinata(5);
@@ -33,5 +45,10 @@ public class Esercizio2 {
         List<Integer> listaNumeriOrdinataEInversa = generaListaRandomInversa(numeriCasuali);
         System.out.println(listaNumeriOrdinataEInversa);
 
+        List<Integer> listaNumeriPari = generaListaParoOdispari(numeriCasuali, true);
+        List<Integer> listaNumeriDispari = generaListaParoOdispari(numeriCasuali, false);
+        System.out.println("Pari " + listaNumeriPari);
+        System.out.println("Dispari" + listaNumeriDispari);
     }
+
 }
