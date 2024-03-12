@@ -21,10 +21,12 @@ public class Esercizio1 {
         for (int i = 0; i < nParole; i++) {
             System.out.println("Scrivi la parola da inserire n:" + (i + 1));
             String parola = input.nextLine();
-            paroleInserite.add(parola);
+
             if (paroleInserite.contains(parola)) {
                 paroleDuplicate.add(parola);
 
+            } else {
+                paroleInserite.add(parola);
             }
 
 
@@ -34,7 +36,9 @@ public class Esercizio1 {
             System.out.println("parole duplicate " + parola);
         }
         for (String parola : paroleInserite) {
-            System.out.println("Parole inserite" + parola);
+            System.out.println("Parole inserite " + parola);
         }
+
+        System.out.println("Numero parole distinte " + paroleInserite.size());
     }
 }
